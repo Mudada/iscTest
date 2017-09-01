@@ -1,0 +1,455 @@
+
+==================== FINAL INTERFACE ====================
+2017-09-01 15:34:46.62028 UTC
+
+interface iscTest-0.1.0.0-3R7qjVtvxBgIIvFlPyswqz:Types 8002
+  interface hash: 7f44e4bae5111227814249d70947b825
+  ABI hash: 6b4a0540327262e92819b63e633722f2
+  export-list hash: f3f0b0429780e3ddb4685e8b97cedc14
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Types.completeNumber
+  Types.gTelephones
+  Types.telephone
+  Types.Cell{Types.Empty Types.SF Types.T}
+  Types.Line
+  Types.Telephone{Types.Telephone}
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Enum 3811281f7b5f26da514529cf3ed44009
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+900045592f29d1bd489f90b00af6d17a
+  $fEqCell :: GHC.Classes.Eq Types.Cell
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.Cell Types.$fEqCell_$c== Types.$fEqCell_$c/= -}
+900045592f29d1bd489f90b00af6d17a
+  $fEqCell_$c/= :: Types.Cell -> Types.Cell -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Types.Cell) (b :: Types.Cell) ->
+                 case a of wild {
+                   Types.T a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Types.T b1
+                        -> case a1 of wild2 { Types.Telephone a2 a3 ->
+                           case b1 of wild3 { Types.Telephone b2 b3 ->
+                           case GHC.Classes.$fEq[]_$s$c== a2 b2 of wild4 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True
+                             -> case GHC.Classes.$fEq[]_$s$c== a3 b3 of wild5 {
+                                  GHC.Types.False -> GHC.Types.True
+                                  GHC.Types.True -> GHC.Types.False } } } } }
+                   Types.SF a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Types.SF b1
+                        -> case GHC.Base.eqString a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } }
+                   Types.Empty
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Types.Empty -> GHC.Types.False } }) -}
+900045592f29d1bd489f90b00af6d17a
+  $fEqCell_$c== :: Types.Cell -> Types.Cell -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Types.Cell) (ds1 :: Types.Cell) ->
+                 case ds of wild {
+                   Types.T a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Types.T b1 -> Types.$fEqCell_$c==1 a1 b1 }
+                   Types.SF a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Types.SF b1 -> GHC.Base.eqString a1 b1 }
+                   Types.Empty
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Types.Empty -> GHC.Types.True } }) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fEqCell_$c==1 ::
+    Types.Telephone -> Types.Telephone -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Types.Telephone) (w1 :: Types.Telephone) ->
+                 case w of ww { Types.Telephone ww1 ww2 ->
+                 case w1 of ww3 { Types.Telephone ww4 ww5 ->
+                 Types.$w$c== ww1 ww2 ww4 ww5 } }) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fEqTelephone :: GHC.Classes.Eq Types.Telephone
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.Telephone Types.$fEqCell_$c==1 Types.$fEqTelephone_$c/= -}
+6fc3713935af021b24ad00b01b89b28a
+  $fEqTelephone_$c/= ::
+    Types.Telephone -> Types.Telephone -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Types.Telephone) (w1 :: Types.Telephone) ->
+                 case w of ww { Types.Telephone ww1 ww2 ->
+                 case w1 of ww3 { Types.Telephone ww4 ww5 ->
+                 Types.$w$c/= ww1 ww2 ww4 ww5 } }) -}
+900045592f29d1bd489f90b00af6d17a
+  $fShowCell :: GHC.Show.Show Types.Cell
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.Cell
+                  Types.$fShowCell_$cshowsPrec
+                  Types.$fShowCell_$cshow
+                  Types.$fShowCell_$cshowList -}
+900045592f29d1bd489f90b00af6d17a
+  $fShowCell1 :: Types.Cell -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Types.$fShowCell_$cshowsPrec Types.$fShowCell2) -}
+773ef73109be4cd9cf88e21391867fec
+  $fShowCell2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+0841907c22feb1424562ca8a91c42ea0
+  $fShowCell3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Empty"#) -}
+a1b14d3e6fdfb887dc44cb8753e729ce
+  $fShowCell4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SF "#) -}
+db1ed8356b52aea309d1f28b226532b1
+  $fShowCell5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "T "#) -}
+900045592f29d1bd489f90b00af6d17a
+  $fShowCell_$cshow :: Types.Cell -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Types.Cell) ->
+                 Types.$fShowCell_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+900045592f29d1bd489f90b00af6d17a
+  $fShowCell_$cshowList :: [Types.Cell] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ Types.Cell Types.$fShowCell1) -}
+900045592f29d1bd489f90b00af6d17a
+  $fShowCell_$cshowsPrec ::
+    GHC.Types.Int -> Types.Cell -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (a :: GHC.Types.Int)
+                   (ds :: Types.Cell)
+                   (eta :: GHC.Base.String) ->
+                 case ds of wild {
+                   Types.T b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Types.$fShowCell5
+                             (case b1 of ww { Types.Telephone ww1 ww2 ->
+                              Types.$w$cshowsPrec 11# ww1 ww2 eta })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Types.$fShowCell5
+                                (case b1 of ww { Types.Telephone ww1 ww2 ->
+                                 Types.$w$cshowsPrec
+                                   11#
+                                   ww1
+                                   ww2
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 eta) })) } }
+                   Types.SF b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Types.$fShowCell4
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows6
+                                (GHC.Show.showLitString
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 eta)))
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Types.$fShowCell4
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Show.showLitString
+                                      b1
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.shows6
+                                         (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 eta))))) } }
+                   Types.Empty
+                   -> GHC.Base.++ @ GHC.Types.Char Types.$fShowCell3 eta }) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fShowTelephone :: GHC.Show.Show Types.Telephone
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.Telephone
+                  Types.$fShowTelephone_$cshowsPrec
+                  Types.$fShowTelephone_$cshow
+                  Types.$fShowTelephone_$cshowList -}
+6fc3713935af021b24ad00b01b89b28a
+  $fShowTelephone1 :: Types.Telephone -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Types.Telephone) (w1 :: GHC.Base.String) ->
+                 case w of ww { Types.Telephone ww1 ww2 ->
+                 Types.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fShowTelephone_$cshow :: Types.Telephone -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Types.Telephone) ->
+                 Types.$fShowTelephone_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fShowTelephone_$cshowList :: [Types.Telephone] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Types.Telephone
+                   Types.$fShowTelephone1) -}
+6fc3713935af021b24ad00b01b89b28a
+  $fShowTelephone_$cshowsPrec ::
+    GHC.Types.Int -> Types.Telephone -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Types.Telephone)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Types.Telephone ww3 ww4 ->
+                 Types.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+fa6999c8c452c3a2a8c0e69e55069082
+  $tc'Empty :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16700786142458933794##
+                   5968781058381420406##
+                   Types.$trModule
+                   Types.$tc'Empty1) -}
+cb905a648cf5319c06b544f2e716c595
+  $tc'Empty1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Empty"#) -}
+e8f3fab3638b0dcc984ac976737079ae
+  $tc'SF :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7360518861430924509##
+                   5879088091304767445##
+                   Types.$trModule
+                   Types.$tc'SF1) -}
+edd6a1ddc308f7768a76788662e3c32d
+  $tc'SF1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SF"#) -}
+7a140b85e8e396d0e2c1aeea6b6473b6
+  $tc'T :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7991254870620440404##
+                   15180012750146864328##
+                   Types.$trModule
+                   Types.$tc'T1) -}
+4c991f3348b6daf6c60633a24dd23f3a
+  $tc'T1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'T"#) -}
+93be1322823e513fec0d02763dc9346d
+  $tc'Telephone :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14687601136296815020##
+                   8887095731551581739##
+                   Types.$trModule
+                   Types.$tc'Telephone1) -}
+a48e6fb7b65402d96c04212bde8acafa
+  $tc'Telephone1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Telephone"#) -}
+339141adae502eb56b53a1079b34a0b1
+  $tcCell :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18083978209329907531##
+                   1283841923959842114##
+                   Types.$trModule
+                   Types.$tcCell1) -}
+744044a2c527502e7815bc3eadabb097
+  $tcCell1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Cell"#) -}
+962b3b2dbe1d51eff87737f32a1467ef
+  $tcTelephone :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16239100462473201288##
+                   2165690586562654374##
+                   Types.$trModule
+                   Types.$tcTelephone1) -}
+639c9fd0d0a600a3ace64960ddc2327e
+  $tcTelephone1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Telephone"#) -}
+e26bc7c306824e6d43ca6e3eef1ed8b9
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Types.$trModule2 Types.$trModule1) -}
+bf24b97dd58d568a9786597f08ab5dc5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Types"#) -}
+b49e80dba8707b230c07da05ffcf10f4
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "iscTest-0.1.0.0-3R7qjVtvxBgIIvFlPyswqz"#) -}
+6b410191aa9ceac242ec976fcb9a894d
+  $w$c/= ::
+    [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [GHC.Types.Int])
+                   (ww1 :: [GHC.Types.Int])
+                   (ww2 :: [GHC.Types.Int])
+                   (ww3 :: [GHC.Types.Int]) ->
+                 case GHC.Classes.$fEq[]_$s$c== ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$s$c== ww1 ww3 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } }) -}
+7c80a4af26f741c93a2f61d5646d47cc
+  $w$c== ::
+    [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [GHC.Types.Int])
+                   (ww1 :: [GHC.Types.Int])
+                   (ww2 :: [GHC.Types.Int])
+                   (ww3 :: [GHC.Types.Int]) ->
+                 case GHC.Classes.$fEq[]_$s$c== ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.$fEq[]_$s$c== ww1 ww3 }) -}
+bd11ba4d0630d3e248d5e70531e673eb
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [0] -}
+52517657515211e0c5e242b0bc5219ed
+  $wcompleteNumber :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: [GHC.Types.Int]) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Int ww 0# of ww2 {
+                   DEFAULT -> GHC.Types.False
+                   10#
+                   -> case ww of wild {
+                        [] -> case GHC.List.badHead ret_ty GHC.Types.Bool of {}
+                        : x ds1
+                        -> case x of wild1 { GHC.Types.I# x1 ->
+                           case x1 of wild2 {
+                             DEFAULT -> GHC.Types.False 0# -> GHC.Types.True } } } }) -}
+7c15470abf4fb3f24edc9a3f8acfbfb8
+  $wgo :: [Types.Telephone] -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0] -}
+900045592f29d1bd489f90b00af6d17a
+  data Cell = T Types.Telephone | SF GHC.Base.String | Empty
+7ff0ec07e580762ccc8048d8b970c856
+  type Line = [Types.Cell]
+6fc3713935af021b24ad00b01b89b28a
+  data Telephone
+    = Telephone {indicatif :: [GHC.Types.Int],
+                 numero :: [GHC.Types.Int]}
+e8e9ba9f94123318f06624648cb77067
+  completeNumber :: Types.Telephone -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S(LS),1*U(A,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.Telephone) ->
+                 case w of ww { Types.Telephone ww1 ww2 ->
+                 Types.$wcompleteNumber ww2 }) -}
+2fe82be7c8f938b68fe11b6919cb84e8
+  gTelephones :: [Types.Telephone] -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: [Types.Telephone]) ->
+                 case Types.$wgo w 0# of ww { DEFAULT -> GHC.Types.I# ww }) -}
+76b910cadfeb0f03f2f881025a5c126f
+  indicatif :: Types.Telephone -> [GHC.Types.Int]
+  RecSel Left Types.Telephone
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.Telephone) ->
+                 case ds of wild { Types.Telephone ds1 ds2 -> ds1 }) -}
+b81c6a7a735c8f8a9d0a82f43233dbbe
+  numero :: Types.Telephone -> [GHC.Types.Int]
+  RecSel Left Types.Telephone
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.Telephone) ->
+                 case ds of wild { Types.Telephone ds1 ds2 -> ds2 }) -}
+2029f4f024b111397d3a5eab56d30c6c
+  telephone :: Types.Line -> [Types.Telephone]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+instance [safe] GHC.Classes.Eq [Types.Cell] = Types.$fEqCell
+instance [safe] GHC.Classes.Eq [Types.Telephone]
+  = Types.$fEqTelephone
+instance [safe] GHC.Show.Show [Types.Cell] = Types.$fShowCell
+instance [safe] GHC.Show.Show [Types.Telephone]
+  = Types.$fShowTelephone
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

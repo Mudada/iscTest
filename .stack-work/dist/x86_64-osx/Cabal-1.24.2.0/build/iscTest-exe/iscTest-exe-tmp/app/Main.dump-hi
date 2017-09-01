@@ -1,0 +1,167 @@
+
+==================== FINAL INTERFACE ====================
+2017-09-01 15:53:23.660628 UTC
+
+interface main@main:Main 8002
+  interface hash: 31f4dd77cfc9270e61b666b2036bb8c2
+  ABI hash: 1d43efe68517a3aa9240904e2050d0e2
+  export-list hash: b1b9c4a0224024a7e20e36691adad4dd
+  orphan hash: d9c86cdf5fa7126fdf84c39fa0768d66
+  flag hash: 629e60542d7b0ce9742e880c59056898
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      iscTest-0.1.0.0@iscTest-0.1.0.0-3R7qjVtvxBgIIvFlPyswqz
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      parsec-3.1.11@parsec-3.1.11-1aqiimsgq2dCv7eoaC8WuX
+                      split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD bf0291e0f2b6c0eca5446f986999f1cc
+import  -/  base-4.9.1.0:GHC.IO.Handle.Text b65719f3b262b071ab1aabeb72fc9d8b
+import  -/  base-4.9.1.0:GHC.IO.IOMode 2f5782f93b12a0d860d6d661b9fb405c
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
+import  -/  iscTest-0.1.0.0@iscTest-0.1.0.0-3R7qjVtvxBgIIvFlPyswqz:Parser 945c23b99e0a55b6c77776d48f06b5f0
+import  -/  iscTest-0.1.0.0@iscTest-0.1.0.0-3R7qjVtvxBgIIvFlPyswqz:Types 6b4a0540327262e92819b63e633722f2
+import  -/  parsec-3.1.11@parsec-3.1.11-1aqiimsgq2dCv7eoaC8WuX:Text.Parsec.Prim 702c92f6e9ce02aa44cc940ef0f347ab
+import  -/  parsec-3.1.11@parsec-3.1.11-1aqiimsgq2dCv7eoaC8WuX:Text.ParserCombinators.Parsec 210b9d7605a419b0319331228e92273a
+e3ddb9cbd45afd8fe757627af7a8d2b3
+  $s$fStream[]mtok ::
+    Text.Parsec.Prim.Stream [tok] Data.Functor.Identity.Identity tok
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ tok.
+                  @ [tok]
+                  @ Data.Functor.Identity.Identity
+                  @ tok
+                  (Main.$s$fStream[]mtok_$s$fStream[]mtok_$cp1Stream @ tok)
+                  (Main.$s$fStream[]mtok_$s$fStream[]mtok_$cuncons @ tok) -}
+984572e3541c637553bf20d89dace2dd
+  $s$fStream[]mtok_$s$fStream[]mtok_$cp1Stream ::
+    GHC.Base.Monad Data.Functor.Identity.Identity
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                (\ @ tok -> Data.Functor.Identity.$fMonadIdentity) -}
+79280bd956ba70f460b23f972c357bee
+  $s$fStream[]mtok_$s$fStream[]mtok_$cuncons ::
+    [tok]
+    -> Data.Functor.Identity.Identity (GHC.Base.Maybe (tok, [tok]))
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ tok (ds :: [tok]) ->
+                 case ds of wild {
+                   []
+                   -> GHC.Base.$
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (GHC.Base.Maybe (tok, [tok]))
+                        @ (Data.Functor.Identity.Identity (GHC.Base.Maybe (tok, [tok])))
+                        (Data.Functor.Identity.$fApplicativeIdentity_$cpure
+                           @ (GHC.Base.Maybe (tok, [tok])))
+                        (GHC.Base.Nothing @ (tok, [tok]))
+                   : t ts
+                   -> GHC.Base.$
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (GHC.Base.Maybe (tok, [tok]))
+                        @ (Data.Functor.Identity.Identity (GHC.Base.Maybe (tok, [tok])))
+                        (Data.Functor.Identity.$fApplicativeIdentity_$cpure
+                           @ (GHC.Base.Maybe (tok, [tok])))
+                        (GHC.Base.Just @ (tok, [tok]) (t, ts)) }) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+d9c0dee8a685c5ed422401aaa63f23bf
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+01d62c2c484918d4b5d94b688c90c90e
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+129a1a814fa667791781f32a098e848d
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+"SPEC/Main $fStream[]mtok @ Identity _" [ALWAYS] forall @ tok
+                                                        ($dMonad :: GHC.Base.Monad
+                                                                      Data.Functor.Identity.Identity)
+  Text.Parsec.Prim.$fStream[]mtok @ Data.Functor.Identity.Identity
+                                  @ tok
+                                  $dMonad
+  = Main.$s$fStream[]mtok @ tok
+"SPEC/Main $fStream[]mtok_$cp1Stream @ Identity _" [ALWAYS] forall @ tok
+                                                                   ($dMonad :: GHC.Base.Monad
+                                                                                 Data.Functor.Identity.Identity)
+  Text.Parsec.Prim.$fStream[]mtok_$cp1Stream @ Data.Functor.Identity.Identity
+                                             @ tok
+                                             $dMonad
+  = Main.$s$fStream[]mtok_$s$fStream[]mtok_$cp1Stream @ tok
+"SPEC/Main $fStream[]mtok_$cuncons @ Identity _" [ALWAYS] forall @ tok
+                                                                 ($dMonad :: GHC.Base.Monad
+                                                                               Data.Functor.Identity.Identity)
+  Text.Parsec.Prim.$fStream[]mtok_$cuncons @ Data.Functor.Identity.Identity
+                                           @ tok
+                                           $dMonad
+  = Main.$s$fStream[]mtok_$s$fStream[]mtok_$cuncons @ tok
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
