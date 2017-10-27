@@ -1,4 +1,4 @@
-module Parser
+module IscTest.Parser
 (parseLine,
  perfectTel,
  clunkyTel,
@@ -12,7 +12,7 @@ module Parser
  parseCell
 ) where
 
-import Types
+import IscTest.Types
 import Data.Char (digitToInt)
 import Text.ParserCombinators.Parsec (many, parse, noneOf, oneOf, space, many1, char, choice, try, digit)
 import Text.Parsec ((<|>)) 

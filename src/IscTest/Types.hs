@@ -1,4 +1,4 @@
-module Types
+module IscTest.Types
 (Line,
  Telephone (Telephone),
  Cell (T, SF, Empty),
