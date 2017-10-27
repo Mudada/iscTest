@@ -9,8 +9,8 @@ module Types
 
 type Line = [Cell]
 
-data Telephone = Telephone { indicatif :: [Int],
-                             numero :: [Int]
+data Telephone = Telephone { indicatif :: String,
+                             numero :: String
                            } deriving (Show, Eq)
 
 data Cell = T Telephone | SF String | Empty
@@ -18,7 +18,7 @@ data Cell = T Telephone | SF String | Empty
 
 completeNumber :: Telephone -> Bool
 completeNumber t = length (numero t) == 10 
-                && head (numero t) == 0
+                && head (numero t) == '0'
 
 clunckyNumber :: Telephone -> Bool
 clunckyNumber t = length (numero t) == 9

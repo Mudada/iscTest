@@ -15,8 +15,12 @@ main = do
     let telephones = concat $ telephone <$> cells
     let gTels = gTelephones telephones
     let nbTels = length telephones
-    let ratio = fromIntegral gTels / fromIntegral nbTels * 100
+    let nbTelRatio = fromIntegral nbTels / fromIntegral (length splited) * 100
+    let goodTelRatio = fromIntegral gTels / fromIntegral nbTels * 100
+    putStrLn $ show gTels ++ " numero renseigner sur " ++ (show $ (length splited) - 1) ++ " lignes."
+    putStrLn $ "Soit " ++ show (100 - nbTelRatio) ++ "% de perte."
     putStrLn $ show gTels ++ " numero correctement formate parse sur " ++ show nbTels ++ " numero total."
-    putStrLn $ "Soit " ++ show (100 - ratio) ++ "% de perte."
+    putStrLn $ "Soit " ++ show (100 - goodTelRatio) ++ "% de perte."
+    putStrLn $ show $ length telephones
     -- mapM_ putStrLn $ show <$> parsed
     return ()

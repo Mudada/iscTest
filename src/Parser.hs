@@ -24,16 +24,21 @@ perfectTel = do
     ws
     char '+'
     number <- many1 $ oneOf "1234567890" <* ws
-    let (f:s:num) = digitToInt <$> number
-    return $ Telephone [f,s] num
+    let (f:s:num) = number
+    case number of f:s:num | length num == 9 -> return $ Telephone [f,s] $ "0" ++ num
+                           | length num == 10 && head num == '0' -> return $ Telephone [f,s] num
+                   _ -> fail "Wrong perfect PhoneNumber"
 
 clunkyTel :: Parser Telephone
 clunkyTel = do
     ws
     number <- many1 $ oneOf "1234567890.-" <* ws
-    let num = digitToInt <$> filter (`notElem` ".-") number
-    case num of x:y:xs |length num == 11 -> return $ Telephone [x,y] xs
-                _ -> return $ Telephone [-1] num
+    let num = filter (`notElem` ".-") number
+    case num of x:y:xs | length num == 9 -> return $ Telephone "0" $ "0" ++ num
+                       | length num == 10 -> return $ Telephone "0" num
+                       | length num == 11 -> return $ Telephone [x,y] $ "0" ++ xs
+                       | length num == 12 && head xs == '0' -> return $ Telephone [x,y] $ xs
+                _ -> fail "Wrong clunky PhoneNumber"
 
 parseTel :: Parser Telephone
 parseTel = try perfectTel <|> try clunkyTel
